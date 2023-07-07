@@ -16,11 +16,11 @@ function valideURL(url: string) {
   return url;
 }
 
-export const UserInfoCard = ({ user }: Props) => {
+const UserInfoCard = ({ user }: Props) => {
   return (
-    <section className="mt-4 mb-8 rounded-lg bg-slate-500">
-      <div className="container px-2 md:px-3 mx-auto flex flex-col">
-        <div className="flex flex-col sm:flex-row mt-4 mb-4  ">
+    <section className="mt-4 mb-8 text-slate-300 rounded-lg bg-slate-500 bg-opacity-20">
+      <div className="container px-3 lg:px-6 mx-auto flex flex-col">
+        <div className="flex flex-col sm:flex-row mt-4 lg:mt-6 mb-4 lg:mb-6">
           <div className="sm:w-1/3 text-center mb-4 md:mb-0 rounded-lg">
             <div className="w-24 h-24 mt-0 overflow-hidden object-contain rounded-full inline-flex items-center justify-center bg-slate-300 text-gray-600">
               <Image
@@ -43,7 +43,7 @@ export const UserInfoCard = ({ user }: Props) => {
                   })}
                 </p>
                 <a datatype="github"
-                  className="flex items-center mt-2 rounded-lg px-5 py-1.5 bg-opacity-10 hover:bg-opacity-20 transition-colors duration-300 bg-white md:text-base"
+                  className="flex items-center mt-4 rounded-lg px-5 py-2 bg-opacity-10 bg-white hover:bg-opacity-20 transition-colors duration-300 md:text-base"
                   href={user.html_url}
                   rel="noreferrer"
                   target="_blank">
@@ -54,17 +54,17 @@ export const UserInfoCard = ({ user }: Props) => {
            </div>
 
           <div className="sm:w-2/3 h-full">
-            <p className="text-center md:text-left text-base md:text-lg font-semibold mb-2">
+            <p className="text-center md:text-left text-base md:text-lg font-semibold mb-4">
               {user.name}
             </p>
 
             { user.bio && 
-              <p className="h-full md:min-h-[96px] text-base text-justify">
+              <p className="h-full md:min-h-[96px] text-sm text-justify">
                 {user.bio}
               </p>
             }
 
-            <div className="w-full bg-opacity-10 bg-white rounded-lg">
+            <div className="w-full bg-opacity-10 bg-white rounded-lg mt-4">
               <div className="grid grid-cols-3 py-4">
                 <article className="text-center space-y-1">
                   <div className="flex items-center justify-center">
@@ -105,7 +105,7 @@ export const UserInfoCard = ({ user }: Props) => {
             </div>
 
             <div className="flex flex-col">
-              <div className="mt-4 grid gap-2 grid-cols-1 md:grid-cols-2">
+              <div className="mt-4 grid gap-y-3 md:gap-x-2 grid-cols-1 md:grid-cols-2">
                 
                 { user.location &&
                   <article className="flex items-center bg-opacity-10 bg-white rounded-lg px-3 py-2">
@@ -156,5 +156,6 @@ export const UserInfoCard = ({ user }: Props) => {
       </div>
     </section>
   );
-};
+}
+
 export default UserInfoCard

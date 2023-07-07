@@ -6,7 +6,6 @@ import { SvgLogo } from "@/components/assets/SvgHeader";
 import { UserInterface } from "@/interface/user";
 import { useState } from "react";
 
-
 const Home = () => {
 
   const [user, setUser] = useState<UserInterface | null>(null);

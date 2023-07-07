@@ -16,24 +16,23 @@ const UserSearchForm = ({ getUser }: Props) => {
   }
 
   return (
-    <form  onSubmit={handleSubmit}
-          className=" mt-8 py-3 rounded-lg bg-opacity-30 bg-slate-500">
-      <div className="flex items-center mx-3">
+    <form onSubmit={handleSubmit}
+          className="mt-8">
+      <div className="flex items-center">
         <div className="relative w-full">
-          <div className="flex py-2 md:py-3 absolute pl-4">
+          <div className="flex py-2.5 absolute pl-4">
             <SvgSearch className="text-indigo-800"/>
           </div>
           <input
-              className="bg-slate-300 text-sm w-full pr-4 pl-12 py-2 md:py-3 out-input rounded-tl-lg rounded-bl-lg"
+              className="bg-slate-300 flex items-center text-sm w-full pr-4 pl-12 py-2.5 out-input rounded-tl-lg rounded-bl-lg"
               name="username"
               type="search"
               placeholder="Enter username GitHub"
-              autoFocus
-             />
+              autoFocus/>
         </div>
 
         <button 
-          className="py-2 md:py-3 px-5 text-sm transition-colors duration-300 hover:bg-indigo-900 bg-indigo-800 font-medium rounded-tr-lg rounded-br-lg">
+          className="py-2.5 px-5 text-sm transition-colors duration-300 hover:bg-indigo-900 bg-indigo-800 font-medium rounded-tr-lg rounded-br-lg">
             Buscar
         </button>
       </div>

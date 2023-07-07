@@ -18,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-slate-900">
       <body className={inter.className}>
-
-        <div className="lg:w-[700px] md:w-[600px] w-[350px] mx-auto">
+        
+        <div className="lg:w-[700px] md:w-[600px] w-[360px] mx-auto">
           <Navigation />
           {children}
         </div>
